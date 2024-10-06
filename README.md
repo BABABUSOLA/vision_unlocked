@@ -225,6 +225,11 @@ We welcome contributions! Please feel free to submit issues, fork the repository
 5. Open a pull request.
 
 ---
+### Locally run docker
+1. docker build -t vision-app .
+2. `docker run -p 8080:8080 \
+-e GOOGLE_APPLICATION_CREDENTIALS=./serviceAccount.json \
+vision-app`
 
 ## License
 
