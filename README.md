@@ -4,6 +4,29 @@ Below is a detailed `README.md` for your Flask-based image and question processi
 
 # Vision Chat API
 
+## Prerequisites
+
+- Python 3.9 or higher
+- Google Cloud Platform account with a **Storage Bucket** created
+- Google Cloud SDK installed and authenticated
+- Service account credentials with access to your GCS bucket
+- Ollama account for interacting with the LLaVA model
+- To configure gogle storage as public:
+1. Make the Object Public:
+You need to make the object (the image file) accessible to everyone. There are two main ways to do this:
+
+Option 1: Via Google Cloud Console
+Go to the Google Cloud Console.
+Navigate to Cloud Storage and find your bucket.
+Click on your bucket to view the objects inside it.
+Select the specific object (image) you want to make public.
+In the object details, click on Edit Permissions.
+Add a new Principal:
+Under New Principals, type allUsers.
+Under Role, select Storage Object Viewer.
+Save the changes.
+This will make the file publicly accessible, and anyone with the URL will be able to access it.
+
 ## Overview
 
 Vision Chat API is a Flask-based web service that allows users to upload an image and ask a question about the image. The API processes the image and the question using the **Ollama llava** model to generate a relevant response. The service is built with modularity in mind and separates concerns into controllers, services, and route definitions.
