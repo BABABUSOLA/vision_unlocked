@@ -33,10 +33,11 @@ def vision_chat(image_url: str, question: str) -> str:
     """
     # Download the image from the URL and pass it as a file-like object
     image_file = download_image(image_url)
-
+    print(image_file,'the image file')
     # Prepare the prompt with the image URL and question
     prompt = [{'role': 'user', 'content': question, 'images': [image_file]}]
-    
+    print(prompt,'the prompt')
     # Call the model and return the response content
     response = chat(model="llava", messages=prompt)
+    print(response,'the response')
     return response['message']['content']

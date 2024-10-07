@@ -231,6 +231,10 @@ We welcome contributions! Please feel free to submit issues, fork the repository
 -e GOOGLE_APPLICATION_CREDENTIALS=./serviceAccount.json \
 vision-app`
 
+3. `docker run -it -p 8080:8080 \
+-v ./serviceAccount.json:/app/serviceAccount.json \-e GOOGLE_APPLICATION_CREDENTIALS=./serviceAccount.json \
+vision-app bash`
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
