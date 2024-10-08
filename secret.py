@@ -4,7 +4,7 @@ from google.cloud import secretmanager
 client = secretmanager.SecretManagerServiceClient()
 
 def access_secret(secret_id, version_id='latest'):
-    project_id = "483870948389"
+    project_id = "1"
     name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
 
     # Access the secret version
